@@ -1,0 +1,45 @@
+{% extends 'ex01/base.html' %}
+{% load static %}
+
+{% block title %}Ex01: Template engine.{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'ex01/style2.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <h1>Template engine.</h1>
+  <p>
+    Django ships with its own template engine (DTL). A template is a text file
+    mixing static content with special constructs that are evaluated at render
+    time against a <em>context</em> (a dictionary of variables).
+  </p>
+
+  <h2>Blocks</h2>
+  <p>
+    <code>{% verbatim %}{% block name %}...{% endblock %}{% endverbatim %}</code>
+    defines a region a child template can override. Combined with
+    <code>{% verbatim %}{% extends %}{% endverbatim %}</code> it powers template
+    inheritance and the DRY principle: this very page overrides the
+    <code>style</code> block to load a different stylesheet.
+  </p>
+
+  <h2>For loops</h2>
+  <p>
+    <code>{% verbatim %}{% for item in list %} {{ item }} {% endfor %}{% endverbatim %}</code>
+    iterates over any iterable passed in the context.
+  </p>
+
+  <h2>If control structures</h2>
+  <p>
+    <code>{% verbatim %}{% if condition %}...{% elif other %}...{% else %}...{% endif %}{% endverbatim %}</code>
+    renders content conditionally.
+  </p>
+
+  <h2>Displaying context variables</h2>
+  <p>
+    A variable is printed with double curly braces:
+    <code>{% verbatim %}{{ variable }}{% endverbatim %}</code>, and filters
+    transform it: <code>{% verbatim %}{{ name|upper }}{% endverbatim %}</code>.
+  </p>
+{% endblock %}

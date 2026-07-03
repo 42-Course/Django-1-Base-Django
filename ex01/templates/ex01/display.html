@@ -1,0 +1,21 @@
+{% extends 'ex01/base.html' %}
+
+{% block title %}Ex01: Display process of a static page.{% endblock %}
+
+{% block content %}
+  <h1>Display process of a static page.</h1>
+  <ol>
+    <li>The browser sends an HTTP request for a URL to the server.</li>
+    <li>Django's URL dispatcher (<code>urls.py</code>) matches the URL against
+        the configured patterns and selects the corresponding view.</li>
+    <li>The view function receives the <code>HttpRequest</code> object and,
+        for a static page, simply asks the template engine to render a
+        template with <code>render(request, 'template.html')</code>.</li>
+    <li>The template engine reads the template file, processes its tags and
+        returns the produced HTML as a string.</li>
+    <li>The view wraps that HTML in an <code>HttpResponse</code> and returns
+        it.</li>
+    <li>Django sends the response back to the browser, which displays the
+        page.</li>
+  </ol>
+{% endblock %}
