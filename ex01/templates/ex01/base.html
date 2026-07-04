@@ -2,12 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block title %}Ex01{% endblock %}</title>
+    <style>body { padding-top: 78px; }</style>
     {% block style %}
     <link rel="stylesheet" href="{% static 'ex01/style1.css' %}" />
     {% endblock %}
   </head>
   <body>
+    {% include 'partials/chrome.html' %}
     {% include 'ex01/nav.html' %}
     <main>
       {% block content %}{% endblock %}
