@@ -1,10 +1,28 @@
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-base-django-piscine-key'
-DEBUG = True
-ALLOWED_HOSTS = ['*']
+
+def _env_bool(name, default):
+    return os.environ.get(name, str(default)).strip().lower() in ('1', 'true', 'yes', 'on')
+
+
+def _env_list(name, default=''):
+    return [item.strip() for item in os.environ.get(name, default).split(',') if item.strip()]
+
+
+# Defaults keep the piscine dev behaviour; production overrides via env vars.
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-base-django-piscine-key')
+DEBUG = _env_bool('DJANGO_DEBUG', True)
+ALLOWED_HOSTS = _env_list('DJANGO_ALLOWED_HOSTS', '*')
+
+# Origins allowed to submit forms (needed for ex02 behind HTTPS in production).
+CSRF_TRUSTED_ORIGINS = _env_list('DJANGO_CSRF_TRUSTED_ORIGINS')
+
+if not DEBUG:
+    # Coolify (Traefik) terminates TLS and forwards the original scheme.
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 INSTALLED_APPS = [
     'django.contrib.contenttypes',
@@ -21,12 +39,26 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
 ]
 
+# WhiteNoise serves static files directly from the app in production.
+# Only enabled when the package is installed, so the base dev env is untouched.
+try:
+    import whitenoise  # noqa: F401
+    MIDDLEWARE.insert(0, 'whitenoise.middleware.WhiteNoiseMiddleware')
+    STORAGES = {
+        'default': {'BACKEND': 'django.core.files.storage.FileSystemStorage'},
+        'staticfiles': {
+            'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage',
+        },
+    }
+except ImportError:
+    pass
+
 ROOT_URLCONF = 'd05.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {'context_processors': []},
     },
@@ -37,7 +69,8 @@ WSGI_APPLICATION = 'd05.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # In production point this at a persistent volume, e.g. /app/data/db.sqlite3
+        'NAME': os.environ.get('DJANGO_DB_PATH', BASE_DIR / 'db.sqlite3'),
     }
 }
 

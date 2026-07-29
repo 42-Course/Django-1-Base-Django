@@ -1,0 +1,182 @@
+{% comment %}
+  Global site chrome: floating navbar + GitHub link.
+  Written once, included by layout.html and ex01/base.html.
+  Everything is position:fixed and class-scoped, so it overlays any
+  exercise without disturbing that exercise's own layout.
+{% endcomment %}
+<style>
+  :root {
+    --nav-fg: #33ff66;
+    --nav-dim: #1f6b38;
+    --nav-accent: #7cffb0;
+    --nav-bg: rgba(6, 12, 8, 0.82);
+    --nav-glow: rgba(51, 255, 102, 0.3);
+  }
+  .site-nav {
+    position: fixed;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    background: var(--nav-bg);
+    border: 1px solid var(--nav-dim);
+    border-radius: 999px;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 22px var(--nav-glow);
+    font-family: "SFMono-Regular", "Consolas", "Menlo", monospace;
+    font-size: 13px;
+    max-width: calc(100vw - 24px);
+  }
+  /* Toggle = the left cap of the pill itself (part of the container border) */
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    align-self: stretch;
+    margin: -8px 10px -8px -14px;          /* stretch to the pill's edges */
+    padding: 0 12px;
+    border: none;
+    border-right: 1px solid var(--nav-dim); /* divider = part of the border */
+    border-radius: 999px 0 0 999px;
+    background: transparent;
+    color: var(--nav-fg);
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .nav-toggle:hover { background: rgba(51, 255, 102, 0.1); color: var(--nav-accent); }
+  .nav-toggle svg { width: 13px; height: 13px; fill: currentColor; display: block; }
+  /* Arrow when closed, X ("collapse") when open */
+  .nav-toggle .ico-close { display: none; }
+  .site-nav.open .nav-toggle .ico-open { display: none; }
+  .site-nav.open .nav-toggle .ico-close { display: block; }
+
+  /* Brand collapsed by default, slides open when .site-nav.open */
+  .site-nav .brand {
+    color: var(--nav-accent);
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+    text-shadow: 0 0 8px var(--nav-glow);
+    max-width: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;      /* not visible, not focusable when closed */
+    pointer-events: none;    /* not clickable when closed */
+    transition: max-width 0.32s ease, opacity 0.25s ease, margin 0.32s ease,
+                visibility 0s linear 0.32s;
+  }
+  .site-nav.open .brand {
+    max-width: 220px;
+    opacity: 1;
+    margin-right: 12px;
+    visibility: visible;
+    pointer-events: auto;
+    transition: max-width 0.32s ease, opacity 0.25s ease, margin 0.32s ease,
+                visibility 0s;
+  }
+
+  .site-nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+  .site-nav ul a {
+    color: var(--nav-fg);
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 999px;
+    transition: all 0.14s ease;
+  }
+  .site-nav ul a:hover {
+    background: rgba(51, 255, 102, 0.1);
+    color: var(--nav-accent);
+    box-shadow: 0 0 12px var(--nav-glow);
+  }
+
+  .site-gh {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 9999;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--nav-bg);
+    border: 1px solid var(--nav-dim);
+    color: var(--nav-fg);
+    box-shadow: 0 0 18px var(--nav-glow);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    transition: all 0.15s ease;
+  }
+  .site-gh:hover {
+    color: var(--nav-accent);
+    transform: translateY(-2px) scale(1.06);
+    box-shadow: 0 0 26px var(--nav-glow);
+  }
+  .site-gh svg { width: 22px; height: 22px; fill: currentColor; display: block; }
+</style>
+
+<nav class="site-nav" id="siteNav">
+  <button class="nav-toggle" id="navToggle" type="button"
+          aria-label="Show title" aria-expanded="false">
+    <svg class="ico-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
+    <svg class="ico-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  </button>
+  <a class="brand" href="/">~/base-django</a>
+  <ul>
+    <li><a href="/ex00/">ex00</a></li>
+    <li><a href="/ex01/templates/">ex01</a></li>
+    <li><a href="/ex02/">ex02</a></li>
+    <li><a href="/ex03/">ex03</a></li>
+  </ul>
+</nav>
+
+<a class="site-gh"
+   href="https://github.com/42-Course/Django-1-Base-Django"
+   target="_blank" rel="noopener noreferrer"
+   title="Piscine repository on GitHub"
+   aria-label="Piscine repository on GitHub">
+  <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.02-1.49-2.01.44-2.43-.97-2.43-.97-.33-.83-.8-1.05-.8-1.05-.66-.45.05-.44.05-.44.72.05 1.1.74 1.1.74.65 1.11 1.7.79 2.11.6.07-.47.25-.79.46-.97-1.6-.18-3.29-.8-3.29-3.57 0-.79.28-1.43.74-1.94-.07-.18-.32-.91.07-1.9 0 0 .6-.19 1.98.74a6.9 6.9 0 013.6 0c1.37-.93 1.97-.74 1.97-.74.39.99.15 1.72.08 1.9.46.51.73 1.15.73 1.94 0 2.78-1.69 3.39-3.3 3.57.26.22.49.66.49 1.33 0 .96-.01 1.74-.01 1.97 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+
+<script>
+  (function () {
+    var nav = document.getElementById('siteNav');
+    var btn = document.getElementById('navToggle');
+    if (!nav || !btn) return;
+
+    function setOpen(open) {
+      nav.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Hide title' : 'Show title');
+    }
+
+    btn.addEventListener('click', function () {
+      setOpen(!nav.classList.contains('open'));
+    });
+
+    // Auto-collapse 1.5s after the mouse leaves the window (or it loses focus).
+    var closeTimer;
+    function startClose() {
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(function () { setOpen(false); }, 1500);
+    }
+    function cancelClose() { clearTimeout(closeTimer); }
+
+    // mouseout with no relatedTarget == cursor left the viewport.
+    document.addEventListener('mouseout', function (e) {
+      var to = e.relatedTarget || e.toElement;
+      if (!to || to.nodeName === 'HTML') startClose();
+    });
+    document.addEventListener('mouseover', cancelClose);
+    window.addEventListener('blur', startClose);
+    window.addEventListener('focus', cancelClose);
+  })();
+</script>

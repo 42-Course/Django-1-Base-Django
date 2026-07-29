@@ -1,0 +1,25 @@
+FROM python:3.12-slim
+
+# Keep Python lean and log straight to the container output.
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+COPY requirements.production.txt /app/
+RUN pip install --no-cache-dir -r requirements.production.txt
+
+COPY . /app
+
+# Persistent data (sqlite db) lives here; mount a Coolify volume at /app/data.
+RUN mkdir -p /app/data
+
+# Collect static files into STATIC_ROOT at build time (served by WhiteNoise).
+# DEBUG=False so the production static pipeline runs; no DB needed for this step.
+RUN DJANGO_DEBUG=False python manage.py collectstatic --noinput
+
+RUN chmod +x /app/entrypoint.sh
+
+EXPOSE 8000
+
+ENTRYPOINT ["/app/entrypoint.sh"]

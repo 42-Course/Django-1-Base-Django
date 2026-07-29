@@ -1,126 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Ex03: Fifty shades of bic.</title>
-    <style>
-      * { box-sizing: border-box; }
-      html, body {
-        margin: 0;
-        height: 100%;
-        overflow: hidden;
-      }
+{% extends 'layout.html' %}
 
-      /* Full-screen flex grid */
-      .grid {
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-        height: 100vh;
-      }
-      .row {
-        flex: 1;              /* every row shares the height equally */
-        display: flex;
-        flex-direction: row;
-      }
-      .cell {
-        flex: 1;              /* every column shares the width equally */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 10px;
-        color: rgba(0, 0, 0, 0.35);
-      }
-      .cell.header {
-        font-size: clamp(12px, 2vw, 28px);
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: #fff;
-        mix-blend-mode: difference;
-      }
+{% block title %}Ex03: Fifty shades of bic.{% endblock %}
+{% block body_class %}fullscreen{% endblock %}
 
-      .bg-nav {
-        background-color: rgba(0, 0, 0, 0.35);
-        text-align: center;
-      }
-      .black {
-        color: black !important;
-        display: block;
-      }
+{% block head %}
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
 
-      /* DVD-bouncing wrapper: handles motion + hue cycling */
-      .dvd {
-        position: fixed;
-        top: 0;
-        left: 0;
-        pointer-events: none;
-        will-change: transform;
-        animation: hue-cycle 5s linear infinite;
-      }
-      /* Inner element: gradient text (clip computed here, un-filtered) */
-      .dvd-text {
-        margin: 0;
-        padding: 0 12px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: clamp(24px, 5vw, 64px);
-        font-weight: 900;
-        white-space: nowrap;
-        background: linear-gradient(
-          90deg,
-          #ff004c, #ff8a00, #ffe600, #00e676,
-          #00b0ff, #7c4dff, #ff004c
-        );
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: transparent;
-      }
-      @keyframes hue-cycle {
-        from { filter: hue-rotate(0deg); }
-        to   { filter: hue-rotate(360deg); }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="grid">
-      <div class="row">
-        {% for name in names %}<div class="bg-nav cell header black">{{ name }}</div>{% endfor %}
-      </div>
-      {% for row in rows %}
-      <div class="row">
-        {% for cell in row %}<div class="cell" style="background-color: {{ cell }};">{{ cell }}</div>{% endfor %}
-      </div>
-      {% endfor %}
-    </div>
+  /* Full-screen flex grid */
+  .grid {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+  .row {
+    flex: 1;              /* every row shares the height equally */
+    display: flex;
+    flex-direction: row;
+  }
+  .cell {
+    flex: 1;              /* every column shares the width equally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.35);
+  }
+  .cell.header {
+    font-size: clamp(12px, 2vw, 28px);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    mix-blend-mode: difference;
+  }
 
-    <div class="dvd" id="dvd">
-      <h1 class="dvd-text">Fifty shades of bic</h1>
-    </div>
+  .bg-nav {
+    background-color: rgba(0, 0, 0, 0.35);
+    text-align: center;
+  }
+  .black {
+    color: black !important;
+    display: block;
+  }
 
-    <script>
-      (function () {
-        var el = document.getElementById('dvd');
-        var x = 40, y = 40;
-        var vx = 2.4, vy = 2.0;   // px per frame
+  /* DVD-bouncing wrapper: handles motion + hue cycling */
+  .dvd {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    will-change: transform;
+    animation: hue-cycle 5s linear infinite;
+  }
+  /* Inner element: gradient text (clip computed here, un-filtered) */
+  .dvd-text {
+    margin: 0;
+    padding: 0 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(24px, 5vw, 64px);
+    font-weight: 900;
+    white-space: nowrap;
+    background: linear-gradient(
+      90deg,
+      #ff004c, #ff8a00, #ffe600, #00e676,
+      #00b0ff, #7c4dff, #ff004c
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  @keyframes hue-cycle {
+    from { filter: hue-rotate(0deg); }
+    to   { filter: hue-rotate(360deg); }
+  }
+</style>
+{% endblock %}
 
-        function step() {
-          var w = window.innerWidth  - el.offsetWidth;
-          var h = window.innerHeight - el.offsetHeight;
+{% block content %}
+<div class="grid">
+  <div class="row">
+    {% for name in names %}<div class="bg-nav cell header black">{{ name }}</div>{% endfor %}
+  </div>
+  {% for row in rows %}
+  <div class="row">
+    {% for cell in row %}<div class="cell" style="background-color: {{ cell }};">{{ cell }}</div>{% endfor %}
+  </div>
+  {% endfor %}
+</div>
 
-          x += vx;
-          y += vy;
+<div class="dvd" id="dvd">
+  <h1 class="dvd-text">Fifty shades of bic</h1>
+</div>
 
-          if (x <= 0)      { x = 0; vx = Math.abs(vx); }
-          else if (x >= w) { x = w; vx = -Math.abs(vx); }
-          if (y <= 0)      { y = 0; vy = Math.abs(vy); }
-          else if (y >= h) { y = h; vy = -Math.abs(vy); }
+<script>
+  (function () {
+    var el = document.getElementById('dvd');
+    var x = 40, y = 40;
+    var vx = 2.4, vy = 2.0;   // px per frame
 
-          el.style.transform = 'translate(' + x + 'px,' + y + 'px)';
-          requestAnimationFrame(step);
-        }
-        requestAnimationFrame(step);
-      })();
-    </script>
-  </body>
-</html>
+    function step() {
+      var w = window.innerWidth  - el.offsetWidth;
+      var h = window.innerHeight - el.offsetHeight;
+
+      x += vx;
+      y += vy;
+
+      if (x <= 0)      { x = 0; vx = Math.abs(vx); }
+      else if (x >= w) { x = w; vx = -Math.abs(vx); }
+      if (y <= 0)      { y = 0; vy = Math.abs(vy); }
+      else if (y >= h) { y = h; vy = -Math.abs(vy); }
+
+      el.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+      requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  })();
+</script>
+{% endblock %}

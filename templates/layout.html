@@ -1,0 +1,20 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}base-django{% endblock %}</title>
+    <style>
+      /* Push normal pages below the floating navbar / above the GitHub button.
+         Fullscreen exercises (ex03) opt out via body.fullscreen. */
+      body:not(.fullscreen) .content { padding-top: 78px; padding-bottom: 96px; }
+    </style>
+    {% block head %}{% endblock %}
+  </head>
+  <body class="{% block body_class %}{% endblock %}">
+    {% include 'partials/chrome.html' %}
+    <div class="content">
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>

@@ -1,34 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Ex00: Markdown Cheatsheet.</title>
-    <style>
-      body { font-family: sans-serif; max-width: 760px; margin: 2em auto; }
-      code, pre { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
-      th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
-      table { border-collapse: collapse; }
-    </style>
-  </head>
-  <body>
-    <h1>Ex00: Markdown Cheatsheet.</h1>
+{% extends 'layout.html' %}
 
-    <h2>Headings</h2>
-    <pre># H1
+{% block title %}Ex00: Markdown Cheatsheet.{% endblock %}
+
+{% block head %}
+<style>
+  .sheet { font-family: sans-serif; max-width: 760px; margin: 0 auto; padding: 0 16px; }
+  .sheet code, .sheet pre { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+  .sheet pre { display: block; overflow-x: auto; }
+  .sheet th, .sheet td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+  .sheet table { border-collapse: collapse; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="sheet">
+  <h1>Ex00: Markdown Cheatsheet.</h1>
+
+  <h2>Headings</h2>
+  <pre># H1
 ## H2
 ### H3
 #### H4
 ##### H5
 ###### H6</pre>
 
-    <h2>Emphasis</h2>
-    <pre>*italic*  or  _italic_
+  <h2>Emphasis</h2>
+  <pre>*italic*  or  _italic_
 **bold**  or  __bold__
 ***bold italic***
 ~~strikethrough~~</pre>
 
-    <h2>Lists</h2>
-    <pre>Unordered:
+  <h2>Lists</h2>
+  <pre>Unordered:
 - Item
 - Item
   - Nested item
@@ -38,45 +41,45 @@ Ordered:
 2. Second
 3. Third</pre>
 
-    <h2>Links and images</h2>
-    <pre>[link text](https://example.com)
+  <h2>Links and images</h2>
+  <pre>[link text](https://example.com)
 ![alt text](image.png)</pre>
 
-    <h2>Blockquotes</h2>
-    <pre>&gt; This is a quote
+  <h2>Blockquotes</h2>
+  <pre>&gt; This is a quote
 &gt;&gt; Nested quote</pre>
 
-    <h2>Code</h2>
-    <pre>Inline `code`
+  <h2>Code</h2>
+  <pre>Inline `code`
 
 ```python
 def hello():
     print("Hello")
 ```</pre>
 
-    <h2>Horizontal rule</h2>
-    <pre>---  or  ***  or  ___</pre>
+  <h2>Horizontal rule</h2>
+  <pre>---  or  ***  or  ___</pre>
 
-    <h2>Tables</h2>
-    <pre>| Column A | Column B |
+  <h2>Tables</h2>
+  <pre>| Column A | Column B |
 | -------- | -------- |
 | a1       | b1       |
 | a2       | b2       |</pre>
 
-    <table>
-      <tr><th>Element</th><th>Markdown syntax</th></tr>
-      <tr><td>Bold</td><td><code>**text**</code></td></tr>
-      <tr><td>Italic</td><td><code>*text*</code></td></tr>
-      <tr><td>Link</td><td><code>[text](url)</code></td></tr>
-      <tr><td>Inline code</td><td><code>`code`</code></td></tr>
-    </table>
+  <table>
+    <tr><th>Element</th><th>Markdown syntax</th></tr>
+    <tr><td>Bold</td><td><code>**text**</code></td></tr>
+    <tr><td>Italic</td><td><code>*text*</code></td></tr>
+    <tr><td>Link</td><td><code>[text](url)</code></td></tr>
+    <tr><td>Inline code</td><td><code>`code`</code></td></tr>
+  </table>
 
-    <h2>Task lists</h2>
-    <pre>- [x] Done
+  <h2>Task lists</h2>
+  <pre>- [x] Done
 - [ ] Not done</pre>
 
-    <h2>Escaping</h2>
-    <pre>Use a backslash to escape: \*literal asterisks\*</pre>
-    <center><span>pulgamecanica @ 42</span></center>
-  </body>
-</html>
+  <h2>Escaping</h2>
+  <pre>Use a backslash to escape: \*literal asterisks\*</pre>
+  <center><span>pulgamecanica @ 42</span></center>
+</div>
+{% endblock %}

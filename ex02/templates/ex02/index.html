@@ -1,26 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Ex02: First form.</title>
-  </head>
-  <body>
-    <h1>First form</h1>
-    <form method="post">
-      {% csrf_token %}
-      {{ form }}
-      <button type="submit">Submit</button>
-    </form>
+{% extends 'layout.html' %}
 
-    <h2>History</h2>
-    {% if history %}
-      <ul>
-        {% for entry in history %}
-          <li>{{ entry.created|date:"Y-m-d H:i:s" }} : {{ entry.text }}</li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <p>No input yet.</p>
-    {% endif %}
-  </body>
-</html>
+{% block title %}Ex02: First form.{% endblock %}
+
+{% block head %}
+<style>
+  .form-wrap { max-width: 620px; margin: 0 auto; padding: 0 16px; font-family: sans-serif; }
+  .form-wrap form { margin: 1em 0; }
+  .form-wrap button { margin-top: 8px; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="form-wrap">
+  <h1>First form</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>History</h2>
+  {% if history %}
+    <ul>
+      {% for entry in history %}
+        <li>{{ entry.created|date:"Y-m-d H:i:s" }} : {{ entry.text }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No input yet.</p>
+  {% endif %}
+</div>
+{% endblock %}
