@@ -13,3 +13,9 @@ Deployed at **https://base-django.pulgamecanica.com/**
 </a>
 
 with love by pulgamecanica
+
+## Map
+
+![module map](docs/map.svg)
+
+*Generated with `lsphere`.*

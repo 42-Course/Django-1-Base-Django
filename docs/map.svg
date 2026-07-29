@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="900" viewBox="0 0 1100 900">
+  <rect width="1100" height="900" fill="#ffffff" />
+  <text x="24" y="39.6" font-family="sans-serif" font-size="18" fill="#333">
+    /tmp/P/Django/Django - 1 - Base Django
+  </text>
+  <g transform="translate(24,72)">
+    <circle cx="438.73" cy="417.41" r="145.76" fill="#fff" />
+    <circle cx="438.73" cy="417.41" r="145.76"
+            fill="none" stroke="#222" stroke-width="1.2"
+            stroke-dasharray="437.42 41 437.42"
+            transform="rotate(90 438.73 417.41)" />
+    <circle cx="683.31" cy="417.41" r="96.90" fill="#fff" />
+    <circle cx="683.31" cy="417.41" r="96.90"
+            fill="none" stroke="#222" stroke-width="1.2"
+            stroke-dasharray="280.42 48 280.42"
+            transform="rotate(90 683.31 417.41)" />
+    <circle cx="606.42" cy="605.08" r="103.99" fill="#fff" />
+    <circle cx="606.42" cy="605.08" r="103.99"
+            fill="none" stroke="#222" stroke-width="1.2"
+            stroke-dasharray="302.69 48 302.69"
+            transform="rotate(90 606.42 605.08)" />
+    <circle cx="614.24" cy="185.47" r="143.18" fill="#fff" />
+    <circle cx="614.24" cy="185.47" r="143.18"
+            fill="none" stroke="#222" stroke-width="1.2"
+            stroke-dasharray="425.81 48 425.81"
+            transform="rotate(90 614.24 185.47)" />
+    <circle cx="406.56" cy="666.07" r="103.05" fill="#fff" />
+    <circle cx="406.56" cy="666.07" r="103.05"
+            fill="none" stroke="#222" stroke-width="1.2"
+            stroke-dasharray="299.73 48 299.73"
+            transform="rotate(90 406.56 666.07)" />
+    <circle cx="344.73" cy="160.87" r="125.53" fill="#fff" />
+    <circle cx="344.73" cy="160.87" r="125.53"
+            fill="none" stroke="#222" stroke-width="1.2"
+            stroke-dasharray="352.87 83 352.87"
+            transform="rotate(90 344.73 160.87)" />
+    <circle cx="744.51" cy="546.54" r="44.07" fill="#7fc97f" />
+    <circle cx="760.73" cy="300.67" r="41.25" fill="#beaed4" />
+    <circle cx="307" cy="555.95" r="43.48" fill="#fdc086" />
+    <circle cx="274.41" cy="317.77" r="44.48" fill="#ffff99" />
+    <circle cx="813.71" cy="483.72" r="47.47" fill="#386cb0" />
+    <circle cx="820.34" cy="368.08" r="46.81" fill="#f0027f" />
+    <circle cx="539.48" cy="746.09" r="50.18" fill="#bf5b17" />
+    <circle cx="739.45" cy="620.36" r="27.99" fill="#666666" />
+    <circle cx="397.79" cy="410.93" r="5.86" fill="#f0027f" />
+    <circle cx="450.27" cy="410.93" r="44.70" fill="#f0027f" />
+    <circle cx="363.03" cy="463.47" r="55.22" fill="#f0027f" />
+    <circle cx="372.19" cy="360.28" r="46.45" fill="#f0027f" />
+    <circle cx="461.47" cy="507.66" r="50.76" fill="#f0027f" />
+    <circle cx="455.98" cy="319.78" r="44.70" fill="#f0027f" />
+    <circle cx="674.81" cy="417.12" r="1.92" fill="#fff" />
+    <circle cx="684.51" cy="417.12" r="5.86" fill="#f0027f" />
+    <circle cx="659.47" cy="462.45" r="44.01" fill="#f0027f" />
+    <circle cx="659.57" cy="372.02" r="43.75" fill="#f0027f" />
+    <circle cx="735.60" cy="417.07" r="42.69" fill="#f0027f" />
+    <circle cx="602.36" cy="594.81" r="1.92" fill="#fff" />
+    <circle cx="608.13" cy="594.81" r="1.92" fill="#fff" />
+    <circle cx="605.24" cy="604.08" r="5.86" fill="#f0027f" />
+    <circle cx="605.24" cy="547.04" r="44.01" fill="#f0027f" />
+    <circle cx="656.59" cy="625.55" r="47.88" fill="#f0027f" />
+    <circle cx="554.78" cy="624.82" r="46.78" fill="#f0027f" />
+    <circle cx="621.67" cy="138.38" r="1.92" fill="#fff" />
+    <circle cx="631.37" cy="138.38" r="5.86" fill="#f0027f" />
+    <circle cx="606.32" cy="183.72" r="44.01" fill="#f0027f" />
+    <circle cx="605.39" cy="90.94" r="46.31" fill="#f0027f" />
+    <circle cx="687.61" cy="138.84" r="46.92" fill="#f0027f" />
+    <circle cx="527.81" cy="140.36" r="43.75" fill="#f0027f" />
+    <circle cx="686.38" cy="239.06" r="51.39" fill="#f0027f" />
+    <circle cx="386.75" cy="665.74" r="1.92" fill="#fff" />
+    <circle cx="396.45" cy="665.74" r="5.86" fill="#f0027f" />
+    <circle cx="371.40" cy="711.08" r="44.01" fill="#f0027f" />
+    <circle cx="371.51" cy="620.65" r="43.75" fill="#f0027f" />
+    <circle cx="456.85" cy="665.69" r="50.82" fill="#f0027f" />
+    <circle cx="285.26" cy="139.43" r="60.39" fill="#fff" />
+    <circle cx="285.26" cy="139.43" r="60.39"
+            fill="none" stroke="#222" stroke-width="1.2"
+            stroke-dasharray="151.71 76 151.71"
+            transform="rotate(90 285.26 139.43)" />
+    <circle cx="406.13" cy="139.43" r="58.57" fill="#7fc97f" />
+    <circle cx="347.38" cy="233.78" r="50.65" fill="#7fc97f" />
+    <circle cx="674.81" cy="417.12" r="0" fill="#fff" />
+    <circle cx="602.36" cy="594.81" r="0" fill="#fff" />
+    <circle cx="608.13" cy="594.81" r="0" fill="#fff" />
+    <circle cx="621.67" cy="138.38" r="0" fill="#fff" />
+    <circle cx="386.75" cy="665.74" r="0" fill="#fff" />
+    <circle cx="285.26" cy="139.43" r="58.46" fill="#7fc97f" />
+    <text x="744.51" y="546.54" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12.592694813255065" fill="#fff">.dockerignore</text>
+    <text x="760.73" y="300.67" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="11.786751590582183" fill="#fff">.gitignore</text>
+    <text x="307" y="555.95" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12.42237447085242" fill="#fff">docker-compose.yaml</text>
+    <text x="274.41" y="317.77" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12.709506536467428" fill="#fff">Dockerfile</text>
+    <text x="813.71" y="483.72" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">entrypoint.sh</text>
+    <text x="820.34" y="368.08" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">manage.py</text>
+    <text x="539.48" y="746.09" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">README.md</text>
+    <text x="739.45" y="620.36" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#fff">requirements.txt</text>
+    <text x="450.27" y="410.93" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12.771199013901988" fill="#fff">asgi.py</text>
+    <text x="363.03" y="463.47" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">settings.py</text>
+    <text x="372.19" y="360.28" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">urls.py</text>
+    <text x="461.47" y="507.66" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">views.py</text>
+    <text x="455.98" y="319.78" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12.771199013901988" fill="#fff">wsgi.py</text>
+    <text x="659.47" y="462.45" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12.574979116431317" fill="#fff">apps.py</text>
+    <text x="659.57" y="372.02" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12.501223050225244" fill="#fff">urls.py</text>
+    <text x="735.60" y="417.07" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12.197813340220694" fill="#fff">views.py</text>
+    <text x="605.24" y="547.04" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12.574979116431317" fill="#fff">apps.py</text>
+    <text x="656.59" y="625.55" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">urls.py</text>
+    <text x="554.78" y="624.82" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">views.py</text>
+    <text x="606.32" y="183.72" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12.574979116431317" fill="#fff">apps.py</text>
+    <text x="605.39" y="90.94" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">forms.py</text>
+    <text x="687.61" y="138.84" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">models.py</text>
+    <text x="527.81" y="140.36" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12.501223050225244" fill="#fff">urls.py</text>
+    <text x="686.38" y="239.06" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">views.py</text>
+    <text x="371.40" y="711.08" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12.574979116431317" fill="#fff">apps.py</text>
+    <text x="371.51" y="620.65" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12.501223050225244" fill="#fff">urls.py</text>
+    <text x="456.85" y="665.69" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">views.py</text>
+    <text x="406.13" y="139.43" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">index.html</text>
+    <text x="347.38" y="233.78" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">layout.html</text>
+    <text x="285.26" y="139.43" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13" fill="#fff">chrome.html</text>
+    <defs><path id="rim-d05-Django---1---Base-Django-439-417" d="M 418.29 277.09 A 145.76 145.76 0 0 1 459.16 277.09"/></defs>
+    <text font-family="sans-serif" font-size="14" fill="#000">
+      <textPath href="#rim-d05-Django---1---Base-Django-439-417" startOffset="50%" text-anchor="middle">d05</textPath>
+    </text>
+    <defs><path id="rim-ex02-Django---1---Base-Django-614-185" d="M 590.36 48.30 A 143.18 143.18 0 0 1 638.13 48.30"/></defs>
+    <text font-family="sans-serif" font-size="14" fill="#000">
+      <textPath href="#rim-ex02-Django---1---Base-Django-614-185" startOffset="50%" text-anchor="middle">ex02</textPath>
+    </text>
+    <defs><path id="rim-templates-Django---1---Base-Django-345-161" d="M 303.98 46.14 A 125.53 125.53 0 0 1 385.48 46.14"/></defs>
+    <text font-family="sans-serif" font-size="14" fill="#000">
+      <textPath href="#rim-templates-Django---1---Base-Django-345-161" startOffset="50%" text-anchor="middle">templates</textPath>
+    </text>
+    <defs><path id="rim-ex01-Django---1---Base-Django-606-605" d="M 582.63 507.85 A 103.99 103.99 0 0 1 630.20 507.85"/></defs>
+    <text font-family="sans-serif" font-size="14" fill="#000">
+      <textPath href="#rim-ex01-Django---1---Base-Django-606-605" startOffset="50%" text-anchor="middle">ex01</textPath>
+    </text>
+    <defs><path id="rim-ex03-Django---1---Base-Django-407-666" d="M 382.77 569.80 A 103.05 103.05 0 0 1 430.34 569.80"/></defs>
+    <text font-family="sans-serif" font-size="14" fill="#000">
+      <textPath href="#rim-ex03-Django---1---Base-Django-407-666" startOffset="50%" text-anchor="middle">ex03</textPath>
+    </text>
+    <defs><path id="rim-ex00-Django---1---Base-Django-683-417" d="M 659.56 327.46 A 96.90 96.90 0 0 1 707.07 327.46"/></defs>
+    <text font-family="sans-serif" font-size="14" fill="#000">
+      <textPath href="#rim-ex00-Django---1---Base-Django-683-417" startOffset="50%" text-anchor="middle">ex00</textPath>
+    </text>
+    <defs><path id="rim-partials-templates-Django---1---Base-Django-285-139" d="M 249.71 94.62 A 60.39 60.39 0 0 1 320.80 94.62"/></defs>
+    <text font-family="sans-serif" font-size="14" fill="#000">
+      <textPath href="#rim-partials-templates-Django---1---Base-Django-285-139" startOffset="50%" text-anchor="middle">partials</textPath>
+    </text>
+  </g>
+
+  <g class="legend">
+    <g transform="translate(900, 786)">
+      <circle cx="6" cy="0" r="6" fill="#7fc97f" />
+      <text x="20" y="0" font-family="sans-serif" font-size="12"
+            dominant-baseline="middle" fill="#000">.html</text>
+    </g>
+    <g transform="translate(900, 804)">
+      <circle cx="6" cy="0" r="6" fill="#bf5b17" />
+      <text x="20" y="0" font-family="sans-serif" font-size="12"
+            dominant-baseline="middle" fill="#000">.md</text>
+    </g>
+    <g transform="translate(900, 822)">
+      <circle cx="6" cy="0" r="6" fill="#f0027f" />
+      <text x="20" y="0" font-family="sans-serif" font-size="12"
+            dominant-baseline="middle" fill="#000">.py</text>
+    </g>
+    <g transform="translate(900, 840)">
+      <circle cx="6" cy="0" r="6" fill="#386cb0" />
+      <text x="20" y="0" font-family="sans-serif" font-size="12"
+            dominant-baseline="middle" fill="#000">.sh</text>
+    </g>
+    <g transform="translate(900, 858)">
+      <circle cx="6" cy="0" r="6" fill="#666666" />
+      <text x="20" y="0" font-family="sans-serif" font-size="12"
+            dominant-baseline="middle" fill="#000">.txt</text>
+    </g>
+    <g transform="translate(900, 876)">
+      <circle cx="6" cy="0" r="6" fill="#fdc086" />
+      <text x="20" y="0" font-family="sans-serif" font-size="12"
+            dominant-baseline="middle" fill="#000">.yaml</text>
+    </g>
+  </g>
+</svg>
