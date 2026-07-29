@@ -5,3 +5,6 @@ staticfiles/
 ex02/form_history.log
 venv
 venv/
+
+en.subject.pdf
+*.subject.pdf
